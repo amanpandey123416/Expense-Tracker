@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body {
+  background: linear-gradient(135deg,#5D54A4,#7C78B8,#6C8CF5);
+  background-size:300% 300%;
+  animation: gradient 8s ease infinite;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+}
+
+@keyframes gradient {
+  0%{background-position:0 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0 50%;}
+}
+
+.container {width:90%;max-width:700px;}
+
+.fade {animation:fade .4s ease-in;}
+@keyframes fade {from{opacity:0;}to{opacity:1;}}
+
+.glass {
+  background: rgba(255,255,255,0.12);
+  border-radius:16px;
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.2);
+  padding:18px;
+  margin:15px 0;
+}
+
+input,select {
+  width:100%;
+  padding:10px;
+  border-radius:10px;
+  margin:8px 0;
+  border:none;
+  outline:none;
+  background:rgba(255,255,255,0.18);
+  color:white;
+}
+
+::placeholder {color:#ddd;}
+
+.btn {
+  background:linear-gradient(45deg,#00d4ff,#0051ff);
+  border:none;
+  padding:12px;
+  border-radius:10px;
+  cursor:pointer;
+  color:white;
+  width:100%;
+  transition:.2s;
+  margin-top:10px;
+}
+
+.btn:hover {transform:scale(1.06);box-shadow:0 0 10px #00d0ff;}
+
+.logout {background:linear-gradient(45deg,#ff4e50,#f9d423);}
+
+.danger {background:linear-gradient(45deg,#ff416c,#ff4b2b);}
+.export {background:linear-gradient(45deg,#00ff95,#00a86b);}
+
+ul li {
+  display:flex;
+  justify-content:space-between;
+  padding:10px;
+  border-left:5px solid;
+  background:rgba(255,255,255,0.12);
+  border-radius:10px;
+  margin-top:10px;
+  animation:appear .4s ease;
+}
+@keyframes appear {from{transform:translateY(10px);opacity:0;}to{transform:none;opacity:1;}}
+
+ul li span {font-weight:600;}
+ul li button {background:none;border:none;font-size:18px;color:#ff6161;cursor:pointer;}
+
+.chart {width:100%;margin-top:20px;}
+
+header {display:flex;justify-content:space-between;align-items:center;}
+.summary-box {display:flex;justify-content:space-between;margin-top:10px;}

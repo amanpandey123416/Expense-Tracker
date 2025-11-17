@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expense Tracker ✨</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container fade">
+<header>
+  <h2>💸 Expense Tracker</h2>
+  <button id="logoutBtn" class="btn logout">Logout</button>
+</header>
+
+<section class="summary glass">
+  <h3>Total Balance</h3>
+  <h1 id="balance">$0.00</h1>
+
+  <div class="summary-box">
+    <div class="income">
+      <h4>Income 💰</h4>
+      <p id="money-plus">+$0.00</p>
+    </div>
+    <div class="expense">
+      <h4>Expense 🧾</h4>
+      <p id="money-minus">-$0.00</p>
+    </div>
+  </div>
+</section>
+
+<section class="controls glass">
+  <input id="search" type="text" placeholder="🔍 Search...">
+  <select id="sort">
+    <option value="newest">Newest First</option>
+    <option value="oldest">Oldest First</option>
+    <option value="high">High Amount</option>
+    <option value="low">Low Amount</option>
+  </select>
+  <select id="monthFilter">
+    <option value="all">All</option>
+    <option value="current">This Month</option>
+  </select>
+</section>
+
+<section class="form-section glass">
+  <form id="form">
+    <input id="text" type="text" placeholder="Title (e.g., Pizza)" required />
+    <input id="amount" type="number" placeholder="Amount (+/-)" required />
+    <select id="category">
+      <option>Food</option>
+      <option>Travel</option>
+      <option>Shopping</option>
+      <option>Bills</option>
+      <option>General</option>
+      <option>Other</option>
+    </select>
+    <button class="btn add">Add Transaction ➕</button>
+  </form>
+</section>
+
+<section class="transactions glass">
+  <h3>📋 History</h3>
+  <ul id="list"></ul>
+</section>
+
+<canvas id="expenseChart" class="glass chart"></canvas>
+
+<div class="btn-area">
+  <button id="exportBtn" class="btn export">Export CSV 📁</button>
+  <button id="clearAll" class="btn danger">Clear All 🗑</button>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
